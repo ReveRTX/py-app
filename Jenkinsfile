@@ -55,7 +55,8 @@ pipeline {
                 script {
                     // Deploy the application by running the Docker container
                     sh """
-                    sudo docker run -d -p 5000:80 ${DOCKER_IMAGE}
+                    sudo docker stop py-app && sudo docker remove py-app || true
+                    sudo docker run -d -p 5000:80 --name py-app ${DOCKER_IMAGE}
                     """
                 }
             }
