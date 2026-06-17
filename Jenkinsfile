@@ -5,7 +5,6 @@ pipeline {
         DOCKER_IMAGE = 'flask-calculator:latest'
         DOCKERHUB_USERNAME = credentials('docker-username')
         DOCKERHUB_ACCESS_TOKEN = credentials('docker-access-token')
-        DOCKER_REGISTRY = 'sbharshavardhan/py-app'
     }
 
     stages {
