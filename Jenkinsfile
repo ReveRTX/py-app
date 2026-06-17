@@ -3,16 +3,16 @@ pipeline {
     
     environment {
         DOCKER_IMAGE = 'flask-calculator:latest'
-        DOCKERHUB_USERNAME = 'vivekreddykompelly'  // Your Docker Hub username
-        DOCKERHUB_ACCESS_TOKEN = 'dckr_pat_YI_2uWMNNl0mnq47KUm28kJMYg'  // Your Docker Hub access token
-        DOCKER_REGISTRY = 'vivekreddykompelly/samplerepo'  // Your Docker repository
+        DOCKERHUB_USERNAME = credentials('docker-username')
+        DOCKERHUB_ACCESS_TOKEN = credentials('docker-access-token')
+        DOCKER_REGISTRY = 'sbharshavardhan/py-app'
     }
 
     stages {
         stage('Checkout/source') {
             steps {
                 // Clone the repository containing your Flask calculator application
-                git 'https://github.com/vrk2299/myapp'  // Replace with your repository URL
+                git 'https://github.com/ReveRTX/py-app'
             }
         }
 

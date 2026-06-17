@@ -1,2 +1,3 @@
-this is a project for my students
-test#1 testing webhook
+# Python application
+
+APP RUNS ON PORT 80, ENSURE SERVER PORT 5000 IS OPEN FOR INCOMING TRAFFIC.
